@@ -1,5 +1,7 @@
 <?php
 
+// Inheritance yaitu membuat turunan dari class parents
+
 class Manager {
     
     var string $name;
