@@ -16,5 +16,5 @@ var_dump($company->programmer);
 
 // Polymorphism dari function
 $company -> sayHelloProgrammer(new Programmer("Yp"));
-$company -> sayHelloProgrammer(new Programmer("Yp Backend"));
-$company -> sayHelloProgrammer(new Programmer("Yp Frontend"));
+$company -> sayHelloProgrammer(new BackEndProgrammer("Yp"));
+$company -> sayHelloProgrammer(new FrontEndProgrammer("Yp"));

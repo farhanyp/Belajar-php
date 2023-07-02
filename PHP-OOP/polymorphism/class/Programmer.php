@@ -22,11 +22,11 @@ class Company{
 
     function sayHelloProgrammer(Programmer $programmer){
         // melakukan pengecekan terhadap instance class
-        if($programmer instanceof Programmer){
+        if($programmer instanceof FrontEndProgrammer){
             echo "Hello Programmer {$programmer->name}".PHP_EOL;
         }else if($programmer instanceof BackEndProgrammer){
             echo "Hello BackEndProgrammer {$programmer->name}".PHP_EOL;
-        }else if ($programmer instanceof FrontEndProgrammer){
+        }else if ($programmer instanceof Programmer){
             echo "Hello FrontEnd Programmer {$programmer->name}".PHP_EOL;
         }
     }
