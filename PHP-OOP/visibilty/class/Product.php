@@ -6,6 +6,11 @@ class Product {
     protected int $price;
     private string $brand;
     
+    function __construct(string $name, int $price, string $brand){
+        $this->name = $name;
+        $this->price = $price;
+        $this->brand = $brand;
+    }
 }
 
 class Kiko extends Product{
