@@ -7,8 +7,12 @@ class Person{
     var ?string $address;
     var string $country = "indonesia";
 
-    function sayHello (string $name): string{
+    function sayHello (?string $name): string{
 
-        return "Hello {$name}";
+        if(is_null($name)){
+            return "My name is {$this->$name}";
+        }else{
+            return "Hello {$name}, my name is {$this->name}";
+        }
     }
 }
