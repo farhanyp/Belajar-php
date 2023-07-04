@@ -1,0 +1,6 @@
+<?php
+
+#[Attribute]
+class NotBlank{
+
+}
