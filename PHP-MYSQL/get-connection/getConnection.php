@@ -10,5 +10,3 @@ function getConnection(): PDO{
 
     return $connection = new PDO("mysql:host=$host:$port;dbname=$database", $username, $password);
 }
-
-var_dump(getConnection());
