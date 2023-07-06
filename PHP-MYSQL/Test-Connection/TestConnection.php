@@ -11,6 +11,9 @@ $password = "";
 try{
     $connection = new PDO("mysql:host=$host:$port;dbname=$database", $username, $password);
     echo "Sukses terkoneksi dengan database";
+
+    // Cara menutup koneksi pdo
+    $connection = null;
 }catch(PDOException $exception){
     echo "Gagal terkoneksi ke database mysql: ".$exception->getMessage().PHP_EOL;
 }
