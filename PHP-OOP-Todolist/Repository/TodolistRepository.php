@@ -20,6 +20,7 @@ namespace Repository {
 
         function save(Todolist $todolist): void{
             $number = sizeof($this->todolist) + 1;
+            var_dump($number);
             $this->todolist[$number] = $todolist;
         }
 

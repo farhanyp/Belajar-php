@@ -50,4 +50,4 @@ function testRemoveTodolist(){
     $todoListService->showTodolist();
 }
 
-testRemoveTodolist();
+testAddTodolist();
