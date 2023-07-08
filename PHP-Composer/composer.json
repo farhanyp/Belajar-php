@@ -3,7 +3,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Yp\\BelajarPhpComposer\\": "src/"
+            "BelajarPhpComposer\\": "src/"
         }
     },
     "authors": [
