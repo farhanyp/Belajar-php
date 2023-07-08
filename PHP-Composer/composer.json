@@ -1,0 +1,16 @@
+{
+    "name": "yp/belajar-php-composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Yp\\BelajarPhpComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "farhanyp",
+            "email": "36284284+farhanyp@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
