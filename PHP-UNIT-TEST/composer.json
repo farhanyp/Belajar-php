@@ -1,0 +1,25 @@
+{
+    "name": "yp/belajar-php-unit-test",
+    "description": "Belajar PHP UNIT TEST",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "BelajarPhpUnitTest\\Test\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BelajarPhpUnitTest\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "farhanyp",
+            "email": "36284284+farhanyp@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+     "require-dev": {
+       "phpunit/phpunit": "9.5.5"
+    }
+}
