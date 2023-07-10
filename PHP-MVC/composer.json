@@ -1,0 +1,27 @@
+{
+    "name": "yp/belajar-php-mvc",
+    "description": "Belajar PHP MVC",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "BelajarPhpMvc\\Belajar\\PHP\\MVC\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BelajarPhpMvc\\Belajar\\PHP\\MVC\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "farhanyp",
+            "email": "36284284+farhanyp@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=8"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "9.5.7"
+    }
+}
