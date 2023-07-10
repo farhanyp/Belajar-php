@@ -15,8 +15,8 @@ class HomeController{
         View::render("/home/index", $model);
     }
 
-    public function login(){
-        echo "HomeController.Login()";
+    public function home(){
+        echo "HomeController.home()";
     }
 
     public function about(){
