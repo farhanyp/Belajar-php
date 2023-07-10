@@ -1,9 +1,12 @@
 <?php
 
-$path= "/index";
-if(isset($_SERVER["PATH_INFO"])){
-    $path = $_SERVER["PATH_INFO"];
-    echo __DIR__.'/../src/View'.$path.'.php';
-}
+require_once __DIR__.'/../vendor/autoload.php';
 
-require __DIR__.'/../src/View'.$path.".php";
+use BelajarPhpMvc\Belajar\PHP\MVC\App\Router;
+use BelajarPhpMvc\Belajar\PHP\MVC\Controller\HomeController;
+
+Router::add("GET", "/", HomeController::class, "index");
+Router::add("GET", "/login", HomeController::class, "login");
+Router::add("GET", "/about", HomeController::class, "about");
+
+Router::run();
