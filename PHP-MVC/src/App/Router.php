@@ -32,10 +32,6 @@ class Router{
                 // $controller->$function();
                 array_shift($variables);
                 $result = call_user_func_array([$controller, $function], $variables);
-                // echo PHP_EOL;
-                // var_dump($controller);
-                // var_dump($function);
-                // var_dump($result);
                 return;
 
             }
