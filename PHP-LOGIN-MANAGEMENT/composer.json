@@ -1,11 +1,10 @@
 {
-    "name": "programmer-zaman-now/belajar-php-mvc",
-    "description": "Belajar PHP MVC",
+    "name": "programmer-zaman-now/belajar-php-login-management",
+    "description": "Belajar Membuat aplikasi Login Management",
     "type": "project",
     "authors": [
         {
-            "name": "Eko Kurniawan Khannedy",
-            "email": "echo.khannedy@gmail.com"
+            "name": "Farhan Yudha Pratama"
         }
     ],
     "require": {
