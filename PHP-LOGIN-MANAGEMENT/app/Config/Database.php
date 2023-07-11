@@ -8,7 +8,7 @@ class Database{
 
     private static ?PDO $pdo = null;
 
-    public static function getConnection(string $env = "test"){
+    public static function getConnection(string $env = "test"): PDO{
         if(self::$pdo == null){
             require __DIR__."/../../config/database.php";
             $config = getDatabaseConfig();
@@ -18,5 +18,7 @@ class Database{
                 $config["database"][$env]["password"]
             );
         }
+
+        return self::$pdo;
     }
 }
