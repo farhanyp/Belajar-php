@@ -1,10 +1,11 @@
 {
-    "name": "programmer-zaman-now/belajar-php-login-management",
-    "description": "Belajar Membuat aplikasi Login Management",
+    "name": "programmer-zaman-now/php-login-management",
+    "description": "PHP Login Management",
     "type": "project",
     "authors": [
         {
-            "name": "Farhan Yudha Pratama"
+            "name": "Eko Kurniawan Khannedy",
+            "email": "echo.khannedy@gmail.com"
         }
     ],
     "require": {
