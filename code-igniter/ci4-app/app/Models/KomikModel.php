@@ -8,6 +8,8 @@ class KomikModel extends Model{
 
     protected $table = "komik";
     protected $primaryKey = 'id';
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'sampul'];
+    protected $useTimestamps = true;
 
     public function getAll(){
         return $this->findAll();
@@ -17,6 +19,14 @@ class KomikModel extends Model{
 
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function insertData($data){
+
+        $result = $this->insert($data);
+
+        return $result;
+    }
+    
 }
 
 ?>

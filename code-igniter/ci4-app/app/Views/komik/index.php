@@ -3,8 +3,14 @@
 <?= $this->section('content') ?>
 
 <div class="container">
-    <h1>Daftar Table</h1>
-    <table class="table">
+  <h1 class="my-3">Daftar Table</h1>
+  <a href="komik/create" class="btn btn-primary">Tambah Data Komik</a>
+  <?php if(session()->getFlashdata("pesan")) {?>
+    <div class="alert alert-success my-3" role="alert">
+    <?= session()->getFlashdata("pesan") ?>
+    </div>
+  <?php } ?>
+    <table class="table" class="mt-3">
       <thead>
         <tr>
           <th scope="col">#</th>
