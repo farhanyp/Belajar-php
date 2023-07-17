@@ -15,4 +15,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
+
+  <script>
+    function previewImg(){
+      print("run function")
+      const sampul = document.querySelector('#sampul');
+      const sampulLabel = document.querySelector('.form-control');
+      const imgPreview = document.querySelector('.img-preview');
+  
+      const fileSampul = new FileReader();
+      fileSampul.readAsDataURL(sampul.files[0]);
+      
+      fileSampul.onload = function(e){
+        imgPreview.src = e.target.result
+      }
+    }
+  </script>
 </html>

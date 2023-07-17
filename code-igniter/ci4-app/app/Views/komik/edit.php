@@ -5,16 +5,18 @@
 <div class="container">
     <div  class="row ">
         <div class="col-8">
-            <h2 class="my-3 ">Form Tambah Data Komik</h2>
-            <form action="/komik/save" method="post" enctype="multipart/form-data">
+            <h2 class="my-3 ">Form Ubah Data Komik</h2>
+            <form action="/komik/update/<?= $oldKomik["slug"] ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field() ?>
+                <input type="hidden" name="slug" value="<?= $oldKomik["slug"] ?>">
+                <input type="hidden" name="sampul" value="<?= $oldKomik["sampul"] ?>">
             <div class="row mb-3">
                 <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control 
                         <?php if($validation) {?>
                             <?= ($validation->hasError('judul')) ? "is-invalid" : "" ?>
-                        <?php } ?>" id="judul" name="judul" value= <?= old("judul") ?>>
+                        <?php } ?>" id="judul" name="judul" value= "<?= $oldKomik["judul"] ?>">
                     <div class="invalid-feedback">
                         <?php if($validation) {?>
                             <?= $validation->getError('judul') ?>
@@ -28,7 +30,7 @@
                         <input type="text" class="form-control 
                         <?php if($validation) {?>
                             <?= ($validation->hasError('penulis')) ? "is-invalid" : "" ?>
-                        <?php } ?>" id="penulis" name="penulis" value= <?= old("penulis") ?>>
+                        <?php } ?>" id="penulis" name="penulis" value= <?= $oldKomik["penulis"] ?>>
                     <div class="invalid-feedback">
                         <?php if($validation) {?>
                             <?= $validation->getError('penulis') ?>
@@ -42,7 +44,7 @@
                         <input type="text" class="form-control 
                         <?php if($validation) {?>
                             <?= ($validation->hasError('penerbit')) ? "is-invalid" : "" ?>
-                        <?php } ?>" id="penerbit" name="penerbit" value= <?= old("penerbit") ?>>
+                        <?php } ?>" id="penerbit" name="penerbit" value= <?= $oldKomik["penerbit"] ?>>
                     <div class="invalid-feedback">
                         <?php if($validation) {?>
                             <?= $validation->getError('penerbit') ?>
@@ -53,7 +55,7 @@
             <div class="row mb-3">
                 <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
                 <div class="col-sm-2">
-                    <img src="/img/default.jpg" class="img-thumbnail img-preview">
+                    <img src="/img/<?= $oldKomik["sampul"] ?>" class="img-thumbnail img-preview">
                 </div>
                 <div class="col-sm-8">
                     <div class="mb-3">

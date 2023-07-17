@@ -20,6 +20,11 @@ class KomikModel extends Model{
         return $this->where(['slug' => $slug])->first();
     }
 
+    public function getById($id){
+
+        return $this->where(['id' => $id])->first();
+    }
+
     public function insertData($data){
 
         $result = $this->insert($data);

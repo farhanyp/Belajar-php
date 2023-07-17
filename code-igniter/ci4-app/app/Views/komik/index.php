@@ -4,7 +4,7 @@
 
 <div class="container">
   <h1 class="my-3">Daftar Table</h1>
-  <a href="komik/create" class="btn btn-primary">Tambah Data Komik</a>
+  <a href="/komik/create" class="btn btn-primary">Tambah Data Komik</a>
   <?php if(session()->getFlashdata("pesan")) {?>
     <div class="alert alert-success my-3" role="alert">
     <?= session()->getFlashdata("pesan") ?>
@@ -20,9 +20,10 @@
         </tr>
       </thead>
       <tbody>
+        <?php $number = 1; ?>
         <?php foreach($komik as $k) {?>
             <tr>
-              <th scope="row"><?= $k["id"] ?></th>
+              <th scope="row"><?= $number++ ?></th>
               <td ><img class="sampul" src="/img/<?= $k["sampul"] ?>"></td>
               <td><?= $k["judul"] ?></td>
               <td>
